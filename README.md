@@ -5,6 +5,9 @@ This model is used to predict peoples ages based on their face. It is trained on
 
 ![image](https://github.com/EjazAliO/Waste-Detect-AI/assets/140644020/292708ec-d523-456a-97e1-008d985837b1)
 
+![image](https://github.com/EjazAliO/Waste-Detect-AI/assets/140644020/f09c5fc0-a127-452f-a68b-f206dee1394a)
+
+![image](https://github.com/EjazAliO/Waste-Detect-AI/assets/140644020/95faa8b0-0e4a-4064-b926-1795ba0d35fe)
 
 ## The Algorithm
 The algorithim is used by recording a video on a Logitech webcam - supported by Jetson nano. It uses a 2GB Jetson Nano, and so it uses it a preflashed SD card flashed from the NVIDIA webpage. It uses a facenet to find a persons face in the image, then it crops the image to just hold the face. It then sends the face to the transfer learning model. The transfer model then predicts your age. It will try to guess your age to the best of its abilities. Then it will print out the age is it is confident. It is up to the user to interepret the information.
