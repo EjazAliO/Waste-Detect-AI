@@ -7,7 +7,9 @@ This model is used to predict peoples ages based on their face. It is trained on
 
 ![image](https://github.com/EjazAliO/Waste-Detect-AI/assets/140644020/f09c5fc0-a127-452f-a68b-f206dee1394a)
 
-![image](https://github.com/EjazAliO/Waste-Detect-AI/assets/140644020/88354ee2-240c-45f2-b5a6-75e4d034b0ed)
+![image](https://github.com/EjazAliO/Waste-Detect-AI/assets/140644020/e966be34-30a5-4c6f-bb52-96315da3cea1)
+
+
 
 
 ## The Algorithm
