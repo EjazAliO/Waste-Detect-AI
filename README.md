@@ -1,7 +1,7 @@
 # Waste-Detect-AI
 Waste Deciding Model
 
-This model is used to predict the type of waste an item is based on its characteristics. It is trained on an imagenet Resnet-18 model using transfer learning. The idea is that many people don't know if an Item is recycling or trash. This AI would decide that for you.
+This model is used to predict the type of waste an item is based on its characteristics. It is trained on an imagenet Resnet-18 model using transfer learning. The idea is that many people don't know if an Item is recycled or trash. This AI would decide that for you.
 
 ![image](https://github.com/EjazAliO/Waste-Detect-AI/assets/140644020/292708ec-d523-456a-97e1-008d985837b1)
 
@@ -35,7 +35,7 @@ Launch VS Code.
 3. Inside jetson-inference/python/training/classification/data, create a new folder called waste_detect. Inside waste_detect, add three folders: test, train, val, and a file named labels.txt.
 4. In the train directory inside waste_detect, create 3 folders named recyclable, organic, and trash.
 5. Copy these folders to the val and test directories.
-6. Distribute the images from your ZIP file among these folders, with 80% in the train folder, 10% in the val folder, and 10% in the test folder for each fruit type. Unfortunately, this will be a manual task and may take some time.
+6. Distribute the images from your ZIP file among these folders, with 80% in the train folder, 10% in the val folder, and 10% in the test folder for each waste type. Unfortunately, this will be a manual task and may take some time.
 
 ## Running the Docker Container
 1. Go to the jetson-inference folder and run ./docker/run.sh.
@@ -49,5 +49,5 @@ Launch VS Code.
 1. Exit the Docker container by pressing Ctrl + D in the terminal.
 2. On your Nano, navigate to jetson-inference/python/training/classification.
 3. Check if the model exists on the Nano by executing ls models/ANY_NAME_YOU_WANT/. You should see a file named resnet18.onnx.
-4. Set the NET and DATASET variables: NET=models/ANY_NAME_YOU_WANT DATASET=data/fruits
+4. Set the NET and DATASET variables: NET=models/ANY_NAME_YOU_WANT DATASET=data/waste_detect
 5. Run this command to see how the model works on an image from the test folder: imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/test/recyclable/PICK_AN_IMAGE.jpg PICK_A_NAME_FOR_THE_IMAGE.jpg. Keep in mind that you are able to change recyclable to any waste you want, you are able to pick any test image by changing PICK_AN_IMAGE.jpg and are able to change the name of the output image name by changing PICK_A_NAME_FOR_THE_IMAGE.jpg. 6. Launch Visual Studio Code to view the image output (located in the classification folder). Remember to replace ANY_NAME_YOU_WANT with the name you gave your model while training.
