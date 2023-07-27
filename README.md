@@ -29,7 +29,7 @@ Launch VS Code.
 10. Click Yes, I trust the authors to access and start working on your projects in this directory.
 
 
-Preparing the Dataset
+## Preparing the Dataset
 1. Navigate to jetson-inference/python/training/classification/data.
 2. Extract the dataset ZIP file.
 3. Inside jetson-inference/python/training/classification/data, create a new folder called waste_detect. Inside waste_detect, add three folders: test, train, val, and a file named labels.txt.
@@ -37,15 +37,15 @@ Preparing the Dataset
 5. Copy these folders to the val and test directories.
 6. Distribute the images from your ZIP file among these folders, with 80% in the train folder, 10% in the val folder, and 10% in the test folder for each fruit type. Unfortunately, this will be a manual task and may take some time.
 
-Running the Docker Container
+## Running the Docker Container
 1. Go to the jetson-inference folder and run ./docker/run.sh.
 2. Once inside the Docker container, navigate to jetson-inference/python/training/classification.
 
-Training the Neural Network
+## Training the Neural Network
 1. Run the training script with the following command: python3 train.py --model-dir=models/ANY_NAME_YOU_WANT --batch-size=4 --workers=4 --epoch=1 data/waste_detect Replace ANY_NAME_YOU_WANT with your desired output file name. This process may take quite some time.
 2. You can stop the process at any time using Ctl+C and resume it later using the --resume and --epoch-start flags.
 
-Testing the Trained Network on Images
+## Testing the Trained Network on Images
 1. Exit the Docker container by pressing Ctrl + D in the terminal.
 2. On your Nano, navigate to jetson-inference/python/training/classification.
 3. Check if the model exists on the Nano by executing ls models/ANY_NAME_YOU_WANT/. You should see a file named resnet18.onnx.
